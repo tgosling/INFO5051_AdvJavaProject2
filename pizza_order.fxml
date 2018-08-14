@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- xml version-->
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.stage.*?>
+
+<!-- The GridPane is the Parent and so have 2 attributes fx:controller and xmlns:fx -->
+<!-- fx:controller: associates the controller class to the document which is the class name.  If the class is in a package than you would call it 'packagename.classname'  -->
+<!-- xmlns:fx is an attribute that specifies the fx namespace -->
+
+<GridPane fx:controller = "PizzaOrderController" xmlns:fx = "http://javafx.com/fxml/1" alignment="center"  styleClass="root">  <!-- set the attributes of the Grid Pane.  Use the root styleClass for the GridPane -->
+
+    <Label text = "Fanshawe Perfect Pizza Online Order System" id = "title"  wrapText = "true" GridPane.columnIndex = "0" GridPane.rowIndex = "0" /><!--remember that the coordinates in the jfx .add method are column, then row-->
+    <Label text = "Name:  " GridPane.columnIndex = "0" GridPane.rowIndex = "1"/>
+    <Label text = "Phone Number: " GridPane.columnIndex = "0" GridPane.rowIndex = "2"/>
+	<Label text = "Address:" GridPane.columnIndex ="0" GridPane.rowIndex = "3"/>   
+    <TextField fx:id = "userName"  GridPane.columnIndex = "1" GridPane.rowIndex = "1"/>
+    <TextField fx:id = "userPhone" GridPane.columnIndex = "1" GridPane.rowIndex = "2" />
+    <TextField fx:id = "userAddress" GridPane.columnIndex = "1" GridPane.rowIndex = "3" />
+	
+	<fx:define>
+		<ToggleGroup fx:id="sizeGroup"/>
+		<ToggleGroup fx:id="crstGroup"/>
+	</fx:define>
+	
+	<Text text = "Size" id = "szTitle" GridPane.columnIndex = "0" GridPane.rowIndex = "6" />
+	<RadioButton fx:id = "smPizza" text = "small" selected="false" toggleGroup="$sizeGroup" onAction="#handleRadioButtonAction" GridPane.rowIndex = "7" GridPane.columnIndex="0"/>
+	<RadioButton fx:id = "medPizza" text = "medium" selected="true" toggleGroup="$sizeGroup" onAction="#handleRadioButtonAction" GridPane.rowIndex = "8" GridPane.columnIndex="0"/>
+	<RadioButton fx:id = "lrgPizza" text = "large" selected="false" toggleGroup="$sizeGroup" onAction="#handleRadioButtonAction" GridPane.rowIndex = "9" GridPane.columnIndex="0"/>
+	<RadioButton fx:id = "xLrgizza" text = "extra large" selected="false" toggleGroup="$sizeGroup" onAction="#handleRadioButtonAction" GridPane.rowIndex = "10" GridPane.columnIndex="0"/>
+	
+	<Text text = "Crust" id = "crstTitle" GridPane.columnIndex = "1" GridPane.rowIndex = "6" />
+	<RadioButton fx:id = "thinCrst" text = "thin" selected="false" toggleGroup="$crstGroup" onAction="#handleRadioButtonAction" GridPane.rowIndex = "7" GridPane.columnIndex="1"/>
+	<RadioButton fx:id = "regCrst" text = "regular" selected="true" toggleGroup="$crstGroup" onAction="#handleRadioButtonAction" GridPane.rowIndex = "8" GridPane.columnIndex="1"/>
+	<RadioButton fx:id = "thkCrst" text = "thick" selected="false" toggleGroup="$crstGroup" onAction="#handleRadioButtonAction" GridPane.rowIndex = "9" GridPane.columnIndex="1"/>
+	
+	<Text text = "Toppings" id = "topTitle" GridPane.columnIndex = "0" GridPane.rowIndex = "11"  />	
+	<CheckBox fx:id = "pepBox" text="Pepperoni" selected="false"  onAction="#handleRadioButtonAction" GridPane.rowIndex = "12" GridPane.columnIndex="0"/>
+	<CheckBox fx:id = "sausgBox" text="Davids Sausage" selected="false"  onAction="#handleRadioButtonAction" GridPane.rowIndex = "13" GridPane.columnIndex="0"/>
+	<CheckBox fx:id = "grPeprBox" text="Green pepper" selected="false"  onAction="#handleRadioButtonAction" GridPane.rowIndex = "14" GridPane.columnIndex="0"/>
+	<CheckBox fx:id = "olvBox" text="Olives" selected="false"  onAction="#handleRadioButtonAction" GridPane.rowIndex = "15" GridPane.columnIndex="0"/>
+	<CheckBox fx:id = "mushBox" text="Mushrooms" selected="false"  onAction="#handleRadioButtonAction" GridPane.rowIndex = "12" GridPane.columnIndex="1"/>
+	<CheckBox fx:id = "tomBox" text="Tomatoes" selected="false"  onAction="#handleRadioButtonAction" GridPane.rowIndex = "13" GridPane.columnIndex="1"/>
+	<CheckBox fx:id = "ancBox" text="Anchovies" selected="false"  onAction="#handleRadioButtonAction" GridPane.rowIndex = "14" GridPane.columnIndex="1"/>
+	<CheckBox fx:id = "oniBox" text="Onions" selected="false"  onAction="#handleRadioButtonAction" GridPane.rowIndex = "15" GridPane.columnIndex="1"/>
+	
+	 <stylesheets>
+    	<URL value="@PizzaOrderStyling.css" />  <!-- add <?import java.net.*?> b/c it will error URL is not a valid type -->
+    </stylesheets>
+	
+	
+</GridPane>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+#title
+{
+	-fx-font-size: 20px;
+	-fx-font-family: "Arial";
+	-fx-font-weight: bold;
+	-fx-fill: #5294E2;
+	-fx-word-wrap: break-word;
+}
+
+.root
+{
+	-fx-background-color: #0f3663;
+	-fx-font-family: "Arial";
+	-fx-text-fill: #CBA300;
+}
+
+.text
+{
+	-fx-font-family: "Arial";
+	-fx-text-fill: #CBA300;
+}	
+.label
+{
+	-fx-font-family: "Arial";
+	-fx-text-fill: #CBA300;
+}
+.radio-button
+{
+	-fx-font-family: "Arial";
+	-fx-text-fill: #CBA300;
+}
+
+.check-box
+{
+	-fx-font-family: "Arial";
+	-fx-text-fill: #CBA300;
+}
