@@ -11,7 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
-public class PizzaOrderController {
+public class TG_PizzaOrderController {
 
 	@FXML private Text title, szTitle, crstTitle, topTitle;
 	@FXML private TextField userName, userPhone, userAddress;

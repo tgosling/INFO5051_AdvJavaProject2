@@ -16,14 +16,14 @@ import javafx.scene.text.Text;
 import javafx.scene.control.*;
 import javafx.stage.*;
 
-public class PizzaOrderGUI extends Application{
+public class TG_PizzaOrderGUI extends Application{
 	
 	@Override
 	public void start(Stage primaryStage) 
 	{
 		try
 		{
-			Parent root = FXMLLoader.load(getClass().getResource("pizza_order.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("pizza_orderSB.fxml"));
 			
 			//Set title
 			primaryStage.setTitle("Tyler Gosling's Pizza Order GUI");
